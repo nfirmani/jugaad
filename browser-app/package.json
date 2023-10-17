@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "browser-app",
+  "version": "0.0.0",
+  "dependencies": {
+    "@theia/core": "latest",
+    "@theia/editor": "latest",
+    "@theia/filesystem": "latest",
+    "@theia/markers": "latest",
+    "@theia/messages": "latest",
+    "@theia/monaco": "latest",
+    "@theia/navigator": "latest",
+    "@theia/preferences": "latest",
+    "@theia/process": "latest",
+    "@theia/terminal": "latest",
+    "@theia/workspace": "latest",
+    "@theia/property-view": "1.42.0",
+    "it-nelson-view": "0.0.0",
+    "it-nelson-dashboard": "0.0.0",
+    "it-nelson-gapi": "0.0.0",
+    "it-nelson-s01": "0.0.0",
+    "it-nelson-joy-dashboard": "0.0.0",
+    "it-nelson-theia-sample03": "0.0.0",
+    "it-nelson-tree-editor": "0.0.0",
+    "it-nelson-property-view": "0.0.0",
+    "it-nelson-started": "0.0.0",
+    "it-nelson-toolbar": "0.0.0",
+    "it-nelson-editor": "0.0.0",
+    "it-nelson-fin-imp": "0.0.0"
+  },
+  "devDependencies": {
+    "@theia/cli": "latest"
+  },
+  "scripts": {
+    "bundle": "yarn rebuild && theia build --mode development",
+    "rebuild": "theia rebuild:browser",
+    "start": "theia start",
+    "watch": "yarn rebuild && theia build --watch --mode development"
+  },
+  "theia": {
+    "target": "browser"
+  }
+}

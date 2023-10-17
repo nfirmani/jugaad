@@ -1,0 +1,9 @@
+#it-nelson-view-widget-container  {
+    /*color: var(--theia-ui-font-color1);*/
+    font-size: 12px;
+    font-weight: 400;
+    color: blue;
+    background-color: aqua;
+    padding: 10px;    
+   /* text-transform: uppercase; */
+}
