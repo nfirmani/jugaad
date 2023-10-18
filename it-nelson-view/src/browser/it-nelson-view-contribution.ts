@@ -21,7 +21,7 @@ export class ItNelsonViewContribution extends AbstractViewContribution<ItNelsonV
         super({
             widgetId: ItNelsonViewWidget.ID,
             widgetName: ItNelsonViewWidget.LABEL,
-            defaultWidgetOptions: { area: 'left' },
+            defaultWidgetOptions: { area: 'main' },
             toggleCommandId: ItNelsonViewCommand.id
         });
     }

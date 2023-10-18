@@ -1,9 +1,29 @@
 #it-nelson-view-widget-container  {
     /*color: var(--theia-ui-font-color1);*/
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     color: blue;
+    background-color: aliceblue;
+    padding: 10px;    
+   /* text-transform: uppercase; */
+}
+
+.it-nelson-view-interpolazione  {
+    /*color: var(--theia-ui-font-color1);*/
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
     background-color: aqua;
+    padding: 10px;    
+   /* text-transform: uppercase; */
+}
+
+.it-nelson-view-stile  {
+    /*color: var(--theia-ui-font-color1);*/
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+    background-color: greenyellow;
     padding: 10px;    
    /* text-transform: uppercase; */
 }

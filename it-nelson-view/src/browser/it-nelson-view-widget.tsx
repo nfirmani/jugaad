@@ -4,7 +4,15 @@ import { AlertMessage } from '@theia/core/lib/browser/widgets/alert-message';
 import { ReactWidget } from '@theia/core/lib/browser/widgets/react-widget';
 import { MessageService } from '@theia/core';
 import { Message } from '@theia/core/lib/browser';
+import { AppMessage } from './AppMessage';
 
+
+const user = {
+    id: 1,
+    name: "Nelson",
+    image: "https://github.com/nfirmani.png"   
+    /* image: "" */
+    };
 
 
 @injectable()
@@ -33,9 +41,12 @@ export class ItNelsonViewWidget extends ReactWidget {
     render(): React.ReactElement {
         const header = `this widget which simply calls the messageService
         in order to display an info message to end users.`;
-        return <div id='it-nelson-view-widget-container'> <h2>questa è una prova di css</h2>
-
-
+        return <div id='it-nelson-view-widget-container'> 
+            <h2>Tutorial React</h2>
+            
+            {/* <AppMessage id={1} name={'nelson'}></AppMessage> */}
+            {/* <AppMessage id={user.id} name={user.name}></AppMessage> */}
+            <AppMessage {...user}></AppMessage>
 
             <AlertMessage type='INFO' header={header} />
             <button id='displayMessageButton' className='theia-button secondary' title='Display Message' onClick={_a => this.displayMessage()}>Display Message</button>
