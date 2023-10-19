@@ -5,6 +5,8 @@ import { bindViewContribution, FrontendApplicationContribution, WidgetFactory } 
 
 import '../../src/browser/style/index.css';
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 export default new ContainerModule(bind => {
     bindViewContribution(bind, ItNelsonViewContribution);
