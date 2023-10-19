@@ -24,6 +24,8 @@ export function AppMessage (user: IUser){
 
     const { name, image = defaultImage} = user    //valore di default senza l'utilizzo dell'operatore ternario
 
+
+
     return <><p className='it-nelson-view-interpolazione'>
 
         <span><h3>1 - Esempi di interpolazione JSX</h3> </span>
