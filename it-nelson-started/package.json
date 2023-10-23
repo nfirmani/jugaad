@@ -10,8 +10,8 @@
   ],
   "dependencies": {
     "@theia/core": "latest",
-    "@theia/preview": "1.42.0",
-    "@theia/keymaps": "1.42.0"
+    "@theia/preview": "latest",
+    "@theia/keymaps": "latest"
   },
   "devDependencies": {
     "rimraf": "latest",

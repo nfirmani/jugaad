@@ -8,7 +8,8 @@ import Fruit from "./fruit.component";
 import FruitsList from "./fruits-list.component";
 
 //import 'f:/2024/it-nelson-theia-i02/node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
-import '/public/bootstrap.min.css';
+//import '/public/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 export class CrudView extends React.Component<{}> {
@@ -31,7 +32,7 @@ export class CrudView extends React.Component<{}> {
                         </li>
                         <li className="nav-item">
                             <Link to={"/add"} className="nav-link">
-                                Aggiungi
+                                -Aggiungi-
                     </Link>
                         </li>
                     </div>

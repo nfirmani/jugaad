@@ -9,10 +9,10 @@
     "src"
   ],
   "dependencies": {
-    "@theia/core": "1.42.0",
-    "@theia/file-search": "1.42.0",
-    "@theia/filesystem": "1.42.0",  
-    "@theia/toolbar": "1.42.0"
+    "@theia/core": "latest",
+    "@theia/file-search": "latest",
+    "@theia/filesystem": "latest",  
+    "@theia/toolbar": "latest"
     
   },
   "devDependencies": {
