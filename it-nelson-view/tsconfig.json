@@ -25,6 +25,6 @@
         "outDir": "lib"
     },
     "include": [
-        "src"
+        "src", "src/browser/custom.d.ts"
     ]
 }
