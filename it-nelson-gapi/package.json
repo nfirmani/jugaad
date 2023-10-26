@@ -9,25 +9,16 @@
     "src"
   ],
   "dependencies": {
-    "@theia/core": "latest",
-    "@google-cloud/local-auth": "^2.0.0",
-    "express": "^4.17.1",
-    "googleapis": "^105.0.0",
-    "googleapis-common": "^6.0.0",
+    "@theia/core": "latest",     
+    "googleapis": "latest",
+    "googleapis-common": "latest",
     "@types/node": "latest",
-    "pg": "^8.8.0",
-    "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.9",
-    "@mui/x-date-pickers": "latest",   
-    "date-fns": "latest",
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
+    "pg": "latest",    
+    "typeorm": "latest",    
     "@mui/x-data-grid": "latest",
-    "@types/react-datepicker": "latest",
-    "@types/react-select": "latest",
-    "react-hook-form": "latest"
+    "@mui/material": "latest",
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest"  
    
   },
   "devDependencies": {

@@ -1,26 +1,35 @@
-import * as React from "react";
 
-interface IProp {
-    name: string;
-    active: boolean;
-  }
+//import { List } from "@mui/icons-material";
+import * as React from "react";
 
 
 const navLinkStyle = { cursor: "pointer" };
-function List({name, active}:IProp ) {
-    const classes = `nav-link ${active ? 'active': ''}`
+function ListItem({ isSelected, name, count }: any) {
+  const textColor = isSelected ? "text-white" : "text-black";
   return (
-    <li className={classes} style={navLinkStyle}>
-      {name}
+    <li
+      className={`nav-link d-flex align-items-center ${isSelected ? "active" : ""}`}
+      style={navLinkStyle}
+    >
+      {/* <List /> */} <span className={`${textColor} ms-2`}>{name}</span>
+      <small className={`${textColor} fw-lighter ms-auto`}>{count}</small>
     </li>
   );
 }
-export default function ListNames() {
+
+export default function ListNames({ lists, selectedListIdx }: any) {
   return (
     <ul className="nav nav-pills flex-column mb-auto">
-      <List name="Importante" active={false}  />
-      <List name="Film da vedere" active={true} />
-      <List name="Libri da leggere" active={false}  />
+      {lists?.map((t:any, idx: any) => {
+        return (
+          <ListItem
+            key={t.id}
+            isSelected={selectedListIdx === idx}
+            name={t.name}
+            count={t.undone_count}
+          />
+        );
+      })}
     </ul>
   );
 }

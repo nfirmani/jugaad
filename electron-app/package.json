@@ -16,18 +16,20 @@
     "@theia/terminal": "latest",
     "@theia/workspace": "latest",
     "@theia/property-view": "latest",
-    "it-nelson-view": "0.0.0",
-    "it-nelson-dashboard": "0.0.0",
-    "it-nelson-gapi": "0.0.0",
-    "it-nelson-s01": "0.0.0",
-    "it-nelson-joy-dashboard": "0.0.0",
-    "it-nelson-theia-sample03": "0.0.0",
-    "it-nelson-tree-editor": "0.0.0",
-    "it-nelson-property-view": "0.0.0",
-    "it-nelson-started": "0.0.0",
-    "it-nelson-toolbar": "0.0.0",
+    
+    "it-nelson-fin-imp": "0.0.0",
     "it-nelson-editor": "0.0.0",
-    "it-nelson-fin-imp": "0.0.0"
+    "it-nelson-toolbar": "0.0.0",
+    "it-nelson-started": "0.0.0",
+    "it-nelson-gapi": "0.0.0",
+
+    "it-nelson-property-view": "0.0.0",
+    "it-nelson-tree-editor": "0.0.0",          
+    "it-nelson-dashboard": "0.0.0",  
+    "it-nelson-s01": "0.0.0",    
+    "it-nelson-theia-sample03": "0.0.0",
+    "it-nelson-joy-dashboard": "0.0.0",
+    "it-nelson-view": "0.0.0"
   },
   "devDependencies": {
     "@theia/cli": "latest",

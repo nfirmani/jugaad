@@ -17,11 +17,21 @@
   "devDependencies": {
     "lerna": "2.4.0"
   },
-  "workspaces": [
-    "it-nelson-fin-imp", "it-nelson-editor", "it-nelson-toolbar", 
-    "it-nelson-started", "it-nelson-property-view", 
-    "it-nelson-tree-editor", "it-nelson-view",  "it-nelson-dashboard", 
-    "it-nelson-joy-dashboard", "it-nelson-gapi",  "it-nelson-s01",
-    "it-nelson-theia-sample03", "browser-app", "electron-app"
+  "workspaces": [ 
+    
+    "it-nelson-fin-imp", 
+    "it-nelson-editor", 
+    "it-nelson-toolbar", 
+    "it-nelson-started",
+    "it-nelson-gapi",  
+
+    "it-nelson-property-view",
+    "it-nelson-tree-editor",
+    "it-nelson-dashboard",   
+    "it-nelson-s01",
+    "it-nelson-theia-sample03", 
+    "it-nelson-joy-dashboard", 
+    "it-nelson-view",  
+    "browser-app", "electron-app"
   ]
 }

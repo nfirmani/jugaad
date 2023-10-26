@@ -1,9 +1,8 @@
 
-//import   { ReactComponent as TrashIcon}  from "bootstrap-icons/icons/trash.svg";
-
-
 
 import * as React from "react";
+//import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const todoClasses = "d-flex align-items-center list-group-item my-1 border rounded-1";
 const btnClasses = "btn btn-sm btn-outline-secondary mx-1 py-0 opacity-25 border-0";
@@ -21,9 +20,7 @@ export default function TodoItem({ id, done, text }: any) {
       />
       <p className={textClasses}>{text}</p>
       <button className={btnClasses}>
-        {/* <TrashIcon /> */}
-        cestino        
-
+        delete {/* <DeleteIcon /> */}     
       </button>
     </li>
   );
