@@ -2,6 +2,7 @@
 
 import * as React from "react";
 //import DeleteIcon from '@mui/icons-material/Delete';
+import { BsTrash } from "react-icons/bs"
 
 
 const todoClasses = "d-flex align-items-center list-group-item my-1 border rounded-1";
@@ -20,7 +21,7 @@ export default function TodoItem({ id, done, text }: any) {
       />
       <p className={textClasses}>{text}</p>
       <button className={btnClasses}>
-        delete {/* <DeleteIcon /> */}     
+      <BsTrash /> {/* <DeleteIcon /> */}     
       </button>
     </li>
   );

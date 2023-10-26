@@ -2,6 +2,8 @@
 //import { List } from "@mui/icons-material";
 import * as React from "react";
 
+import { BsListUl } from 'react-icons/bs';
+
 
 const navLinkStyle = { cursor: "pointer" };
 function ListItem({ isSelected, name, count }: any) {
@@ -11,7 +13,7 @@ function ListItem({ isSelected, name, count }: any) {
       className={`nav-link d-flex align-items-center ${isSelected ? "active" : ""}`}
       style={navLinkStyle}
     >
-      {/* <List /> */} <span className={`${textColor} ms-2`}>{name}</span>
+      <BsListUl /> <span className={`${textColor} ms-2`}>{name}</span>
       <small className={`${textColor} fw-lighter ms-auto`}>{count}</small>
     </li>
   );

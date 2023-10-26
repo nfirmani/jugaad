@@ -10,7 +10,9 @@
   ],
   "dependencies": {
     "@theia/core": "latest",
-    "bootstrap": "latest" 
+    "bootstrap": "latest",
+    "react-icons": "4.11.0" 
+    
   },
   "devDependencies": {
     "rimraf": "latest",
