@@ -1,6 +1,4 @@
 import * as React from "react";
-
-
 import {
   injectable,
   postConstruct,
@@ -10,37 +8,25 @@ import {
 import { ReactWidget } from "@theia/core/lib/browser/widgets/react-widget";
 import { MessageService } from "@theia/core";
 import { Message } from "@theia/core/lib/browser";
-import { AppCh63 } from "./components/AppCh63";
-//import Sidebar from "./components/Sidebar";
-//import Main from "./components/Main";
-//import Layout, { LeftCol, RightCol } from "./components/Layout";
-//import User from "./components/User";
-//import TodoList from "./components/TodoList";
-//import ListNames from "./components/ListNames";
+import Sidebar from "./components/Sidebar";
+import Main from "./components/Main";
+import Layout, { LeftCol, RightCol } from "./components/Layout";
+import User from "./components/User";
+import TodoList from "./components/TodoList";
+import ListNames from "./components/ListNames";
 
-/* const user = {
+const user = {
   id: 1,
   name: "Nelson",
   image: "https://github.com/nfirmani.png",
-  
+  /* image: "" */
 };
 
- const lists = [
+const lists = [
     { id: 1, name: "Importante", undone_count: 0 },
     { id: 2, name: "Film da vedere", undone_count: 2 },
     { id: 3, name: "Libri da leggere", undone_count: 0 },
-    ]; 
-
- */
-  
-
-
-/*     const changeList = (idx: number) => {
-      console.log(`changeList to ${idx} from ${selectedListIdx}`);
-      selectedListIdx = idx;
-    };
- */
-  
+    ];
 
 @injectable()
 export class ItNelsonViewWidget extends ReactWidget {
@@ -64,7 +50,7 @@ export class ItNelsonViewWidget extends ReactWidget {
     this.update();
   }
 
-  /*  render(): React.ReactElement {
+  render(): React.ReactElement {
     return (
       <Layout>
         <LeftCol>
@@ -79,15 +65,6 @@ export class ItNelsonViewWidget extends ReactWidget {
         <Main />
       </Layout>
     );
-  } */
-
-  render(): React.ReactElement {
-    
-    return (
-     <AppCh63 />      
-      
-    );
-   
   }
 
   protected displayMessage(): void {
@@ -104,4 +81,3 @@ export class ItNelsonViewWidget extends ReactWidget {
     }
   }
 }
-
