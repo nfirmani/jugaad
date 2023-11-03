@@ -10,15 +10,17 @@ import {
 import { ReactWidget } from "@theia/core/lib/browser/widgets/react-widget";
 import { MessageService } from "@theia/core";
 import { Message } from "@theia/core/lib/browser";
-import { AppCh63 } from "./components/AppCh63";
-//import Sidebar from "./components/Sidebar";
-//import Main from "./components/Main";
-//import Layout, { LeftCol, RightCol } from "./components/Layout";
-//import User from "./components/User";
-//import TodoList from "./components/TodoList";
-//import ListNames from "./components/ListNames";
+//import { AppCh63 } from "./components/AppCh63";
+//import { AppCh64 } from "./components/AppCh64";
+//import { AppCh63 } from "./components/AppCh63";
+import Sidebar from "./components/Sidebar";
+import Main from "./components/Main";
+import Layout, { LeftCol, RightCol } from "./components/Layout";
+import User from "./components/User";
+import TodoList from "./components/TodoList";
+import ListNames from "./components/ListNames";
 
-/* const user = {
+ const user = {
   id: 1,
   name: "Nelson",
   image: "https://github.com/nfirmani.png",
@@ -31,7 +33,7 @@ import { AppCh63 } from "./components/AppCh63";
     { id: 3, name: "Libri da leggere", undone_count: 0 },
     ]; 
 
- */
+
   
 
 
@@ -84,7 +86,18 @@ export class ItNelsonViewWidget extends ReactWidget {
   render(): React.ReactElement {
     
     return (
-     <AppCh63 />      
+      <Layout>
+      <LeftCol>
+        <User id={0} name={user.name} image={user.image} />
+        <hr /> 
+        <ListNames lists={lists} selectedListIdx={1} />
+      </LeftCol>
+      <RightCol>
+         <TodoList /> 
+      </RightCol>
+      <Sidebar {...user} />
+      <Main />
+    </Layout>   
       
     );
    
