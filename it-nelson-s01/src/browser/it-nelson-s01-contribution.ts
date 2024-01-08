@@ -16,7 +16,7 @@ import {TerminalMenus} from "@theia/terminal/lib/browser/terminal-frontend-contr
 
 export const GEN_COMMAND = {
     id: 'ItNelsonS01.command',
-    label: 'Say Hello'
+    label: 'Ciao'
 };
 
 export const FILE_DIALOG = {
@@ -103,10 +103,10 @@ export class ItNelsonS01CommandContribution implements CommandContribution {
         registry.registerCommand(FILE_DIALOG, {
             execute: async () => {
                 const uri = await this.fileDialogService.showOpenDialog({
-                    title: ' Choose a directory ',
+                    title: ' Scegli la cartella ',
                     canSelectFiles: false,
                     canSelectFolders: true,
-                    openLabel: ' choice ',
+                    openLabel: ' scegli  ',
                 });
          
                 console.log(' Choose the path ', uri);
@@ -116,11 +116,11 @@ export class ItNelsonS01CommandContribution implements CommandContribution {
         registry.registerCommand(SAVE_DIALOG, {
             execute: async () => {
                 const uri = await this.fileDialogService.showSaveDialog({
-                    title: ' Select Save directory ',
-                    saveLabel: ' preservation '
+                    title: ' Seleziona la directory di salvataggio ',
+                    saveLabel: ' Stessa cartella ',
                 });
          
-                console.log(' Save the path ', uri);
+                console.log(' Salva il percorso ', uri);
              }
         });
        
@@ -140,13 +140,13 @@ export class ItNelsonS01CommandContribution implements CommandContribution {
         registry.registerCommand(DIALOG_BOX, {
             execute: async () => {
                 const confirmed = await new ConfirmDialog({
-                    title: ' This is a confirmation box ',
-                    msg: ' Are you sure to execute ？',
-                    ok: ' confirm ',
-                    cancel: ' Cancel '
+                    title: ' Questo è un box di conferma ',
+                    msg: ' Sei sicuro di voler continuare ？',
+                    ok: ' Conferma ',
+                    cancel: ' Cancella '
                 }).open();
         
-                console.log(' Are you sure ', confirmed);
+                console.log(' Tu sei sicuro ', confirmed);
             }
         });
 
@@ -157,22 +157,22 @@ export class ItNelsonS01CommandContribution implements CommandContribution {
             
             execute: async () => {
                 const result = await this.quickInputService.input({
-                    placeHolder: 'Please provide a positive integer',
+                    placeHolder: 'Digitare un intero positivo',
                     validateInput: async (input: string) => {
                         const numericValue = Number(input);
                         if (isNaN(numericValue)) {
-                            return 'Invalid: NaN';
+                            return 'Non valido: NaN';
                         } else if (numericValue % 2 === 1) {
-                            return 'Invalid: Odd Number';
+                            return 'Non valido: Solo numeri pari sono consentiti';
                         } else if (numericValue < 0) {
-                            return 'Invalid: Negative Number';
+                            return 'Non valido: Solo numeri positivi sono consentiti';
                         } else if (!Number.isInteger(numericValue)) {
-                            return 'Invalid: Only Integers Allowed';
+                            return 'Non valido: solo interi sono consentiti';
                         }
                     }
                 });
                 if (result) {
-                    this.messageService.info(`Positive Integer: ${result}`);
+                    this.messageService.info(`Intero positivo: ${result}`);
                 }
             }
         });
@@ -181,24 +181,24 @@ export class ItNelsonS01CommandContribution implements CommandContribution {
             execute: () => {
                 this.messageService
                     .showProgress({
-                        text: 'Starting to report progress',
+                        text: 'Avvio di una progress bar ',
                     })
                     .then(progress => {
                         window.setTimeout(() => {
                             progress.report({
-                                message: 'First step completed',
+                                message: 'Primo passo completato',
                                 work: { done: 25, total: 100 }
                             });
                         }, 2000);
                         window.setTimeout(() => {
                             progress.report({
-                                message: 'Next step completed',
+                                message: 'Secondo passo completato',
                                 work: { done: 60, total: 100 }
                             });
                         }, 4000);
                         window.setTimeout(() => {
                             progress.report({
-                                message: 'Complete',
+                                message: 'Completato',
                                 work: { done: 100, total: 100 }
                             });
                         }, 6000);
@@ -211,22 +211,22 @@ export class ItNelsonS01CommandContribution implements CommandContribution {
             execute: () => {
                 this.messageService
                     .showProgress({
-                        text: 'Starting to report indeterminate progress',
+                        text: 'Avvio di una progress bar indeterminata',
                     })
                     .then(progress => {
                         window.setTimeout(() => {
                             progress.report({
-                                message: 'First step completed',
+                                message: 'Primo passo completato',
                             });
                         }, 2000);
                         window.setTimeout(() => {
                             progress.report({
-                                message: 'Next step completed',
+                                message: 'Secondo passo completato',
                             });
                         }, 4000);
                         window.setTimeout(() => {
                             progress.report({
-                                message: 'Complete',
+                                message: 'Completato',
                             });
                         }, 6000);
                         window.setTimeout(() => progress.cancel(), 7000);
