@@ -37,3 +37,6 @@ registerMenus(menus: MenuModelRegistry): void {
     });
 }    
 }
+
+//una funzione che mi restituisce un oggetto json
+
